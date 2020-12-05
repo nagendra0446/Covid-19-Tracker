@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script type ="text/javascript">
+        window.onload = function what(){
+        document.getElementById('date').innerHTML = new Date().toLocaleDateString('en-IN') ;
+        };
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js"></script>
+    <title>Covid-19 Tracker</title>
+</head>
+<body>
+    <table class="header_tab">
+        <th class="logo">
+            <img src="images/covid_logo.jpg" width="80px">
+        </th>
+        <th class="heading">
+            <a style="color: rgb(61, 124, 126);">Covid-19</a> 
+            <a style="color: rgba(0, 100, 0, 0.753);">Tracker</a>
+        </th>
+        <th width=60%></th>
+        <th class="about" onclick="location.href='about.html';">
+            <img src="images/info_symbol.png" width="30px" >
+            <th class="about_text" onclick="location.href='about.html';">About</th>
+        </th>
+    </table>
+    
+    <table class="cases_area" cellspacing=15px>
+        <th class="cases" bgcolor="#16697a" style="color: white;">
+            Confirmed<br>
+            <a id="total_confirmed"></a><br>
+            <a id="delta_confirmed">+</a>
+        </th>
+
+        <th class="cases" bgcolor="#61b15a" style="color: white;">
+            Recoverd<br>
+            <a id="total_recovered" ></a><br>
+            <a id="delta_recovered">+</a>
+        </th>
+
+        <th class="cases" bgcolor="#f05454" style="color: white;">
+            Deaths<br>
+            <a id="total_deaths"></a><br>
+            <a id="delta_deaths">+</a>
+        </th>
+
+        <th class="req_text">
+            in INDIA as of <a id="date"></a>
+        </th>
+    </table>
+
+    <canvas id="myChart1"></canvas>
+    <canvas id="myChart2"></canvas>
+    <canvas id="myChart3"></canvas>
+</body>
+</html>
